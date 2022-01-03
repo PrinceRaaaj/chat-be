@@ -13,7 +13,7 @@ const io = new Server(server, {
   }
 });
 
-app.get("/", (req, res) => res.send("Chat BE"))
+app.get("/", (req, res) => res.send("Chat BE with Socket.io by Prince Raj"))
 
 io.on("connection", (socket) => {
   console.log(socket.id)
@@ -28,6 +28,6 @@ io.on("connection", (socket) => {
 
 });
 
+const port = 9000 || process.env.PORT
 
-
-server.listen(9000, console.log("App started at port 9000"))
+server.listen(port, console.log("App started at port 9000"))
