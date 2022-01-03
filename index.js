@@ -13,7 +13,7 @@ const io = new Server(server, {
   }
 });
 
-app.get("/", (req, res) => res.send("Chat BE with Socket.io by Prince Raj"))
+app.get("/", (req, res) => {res.send("Chat BE with Socket.io by Prince Raj"); res.end()})
 
 io.on("connection", (socket) => {
   console.log(socket.id)
