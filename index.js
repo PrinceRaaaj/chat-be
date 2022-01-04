@@ -10,7 +10,7 @@ var server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-socket-io-prince.herokuapp.com/",
+    origin: "https://chat-socket-io-prince.herokuapp.com",
     methods: ["GET", "POST"]
   }
 });
